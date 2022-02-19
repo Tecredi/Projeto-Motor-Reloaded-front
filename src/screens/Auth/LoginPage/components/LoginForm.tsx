@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Checkbox from '../../../../components/CheckBox/CheckBox';
 import InputDocument from '../../../../components/Input/InputDocument';
 import RaisedButton from '../../../../components/RaisedButton/RaisedButton';
-import { FormContainer } from '../LoginPage.styles';
+import { FormContainer, InputStyled } from '../LoginPage.styles';
 import { Form } from 'antd';
 import useDocumentValidator from '../../../../hooks/ant/useDocumentValidator';
 import { useForm } from 'antd/lib/form/Form';
@@ -40,7 +40,7 @@ const LoginForm = ({ loginType }: Props) => {
             loginType === 'tomador' ? cpfRule : cnpjRule,
           ]}
         >
-          <InputDocument type={loginType === 'agencia' ? 'cnpj' : 'both'} className="mb-3" />
+          <InputStyled type={loginType === 'agencia' ? 'cnpj' : 'both'} className="mb-3" />
         </Form.Item>
 
         <LoginCheckbox

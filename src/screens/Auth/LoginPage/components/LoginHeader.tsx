@@ -1,21 +1,20 @@
 import React from 'react';
 import Header from '../../../../components/Header/Header';
 import {
-  Container,
   SubHeader,
   CenteredVertical,
 } from '../../../../components/Header/Header.styles';
+import LogoContainer from '../../../../components/Header/LogoContainer';
 
 const LoginHeader = () => {
   return (
     <>
       <Header>
-        <Container>
-          <img src="/assets/Images/logo_white.png/" />
+        <LogoContainer>
           <p>crédito inteligente</p>
-        </Container>
+        </LogoContainer>
       </Header>
-      <SubHeader>
+      <SubHeader dark={true}>
         <CenteredVertical>
           <p>Acesse a plataforma</p>
         </CenteredVertical>

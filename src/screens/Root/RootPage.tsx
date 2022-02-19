@@ -7,6 +7,7 @@ import RaisedButton from '../../components/RaisedButton/RaisedButton';
 import RoundedButton from '../../components/RoundedButton/RoundedButton';
 import { useTheme } from 'styled-components';
 import { ThemeInterface } from '../../themes/tecredi-blue';
+import Logo from '../../components/Logo/Logo';
 
 const Outer = styled.div`
   background-color: ${(props) => props.theme.primaryColor};
@@ -26,9 +27,6 @@ const LogoContainer = styled.div`
   padding-top: 3rem;
 `;
 
-const Logo = styled.img`
-  vertical-align: middle;
-`;
 
 const Text = styled.h2`
   font-family: 'Roboto Slab', sans-serif;
@@ -47,7 +45,7 @@ const RootPage = () => {
     <Outer>
       <Container>
         <LogoContainer>
-          <Logo src="/assets/Images/logo_white.png"></Logo>
+          <Logo />
         </LogoContainer>
         <Text>crédito inteligente</Text>
         <RaisedButton

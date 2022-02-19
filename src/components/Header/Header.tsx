@@ -4,8 +4,8 @@ import { HeaderStyled } from './Header.styles';
 
 
 
-const Header = ({children}) => (
-    <HeaderStyled>
+const Header = ({children, dark = false, ...rest}) => (
+    <HeaderStyled dark={dark} {...rest}>
         {children}
     </HeaderStyled>
 )

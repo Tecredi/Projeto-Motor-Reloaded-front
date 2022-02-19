@@ -11,7 +11,8 @@ type Props = {
 const CNPJ_MASK = '11.111.111/1111-11';
 const CPF_MASK = '111.111.111-11';
 
-const InputDocument = ({ type, onChange, ...rest }: Props | any) => {
+
+const InputDocument = ({ type, ...rest }: Props | any) => {
   const [isCnpjLength, setIsCnpjLength] = useState(true);
   const [mask, setMask] = useState(CNPJ_MASK);
 
@@ -30,9 +31,6 @@ const InputDocument = ({ type, onChange, ...rest }: Props | any) => {
     <Input
       placeholder={''}
       onChange={(event) => {
-        if (onChange) {
-          onChange(event);
-        }
         evaluateLength(event.target.value);
       }}
       mask={mask}
